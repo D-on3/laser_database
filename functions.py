@@ -6,7 +6,7 @@ import base64
 from PIL import Image
 from io import BytesIO
 import streamlit_authenticator as stauth # VERSION 0.15 WORKS OTHERWISE CHECK THE SYNTAX FOR THE NEW V
-from other_misc import database as db
+import database as db
 
 
 def show_table():
@@ -87,11 +87,14 @@ def streamlit_table_pictures():
 def streamlit_table_data():
 
 
-    data_to_be_represented =  {'20 ':[2,3,4,5,6,7],'40':[2,3,4,5,6,7],'60':[2,3,4,5,6,7],'80':[2,3,4,5,6,7],\
+    data_to_be_represented =  {'20 ':[1,2,3,4,5,6],'40':[7,8,9,10,5,2],'60':[2,3,4,5,6,7],'80':[2,3,4,5,6,7],\
                                '90':[2,3,4,5,6,7],'160':[2,3,4,5,6,7]}
     df = pd.DataFrame(data=data_to_be_represented,index=["parameter","parameter","parameter","parameter","parameter","parameter"])
     st.table(df)
 
+    chart_data = pd.DataFrame(data=data_to_be_represented , )
+
+    st.line_chart(chart_data)
 
 
 
@@ -105,9 +108,12 @@ def menus():
 
 
 
-
-
 menus()
+
+
+
+
+
 
 
 

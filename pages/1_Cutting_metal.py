@@ -1,5 +1,5 @@
 
-from other_misc.functions import  *
+from functions import  *
 from PIL import Image
 image = Image.open('/home/aod/coding/database_streamlit/pages/tamplates/assets/download.jpeg')
 

@@ -1,4 +1,4 @@
-from other_misc.functions import *
+from functions import *
 
 login_db()
 authentication()

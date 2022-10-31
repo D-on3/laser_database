@@ -1,4 +1,4 @@
-from other_misc.functions import *
+from functions import *
 
 
 
@@ -22,13 +22,6 @@ st.header("This is the first")
 streamlit_table_data()
 
 streamlit_table_pictures()
-menus()
-
-
-
-
-
-
 
 
 
